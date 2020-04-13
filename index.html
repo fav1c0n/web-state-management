@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/hankchizljaw/boilerform@master/dist/css/boilerform.min.css" />
+    <title>Web State Management</title>
+</head>
+<body>
+    <main>
+        <header class="intro">
+            <h1 class="intro__heading">Tareas hechas hoy</h1>
+            <p class="intro__summary">Esto es la lista de tareas que he hecho hoy</p>
+        </header>
+        <section class="app">
+            <section class="app__input">
+                <h2 class="app__heading">Lo que he hecho</h2>
+                <div class="js-items" aria-live="polite" aria-label="La lissta de cosas que he hecho"></div>
+                <form class="[ new-item ] [ boilerform ] [ js-form ]">
+                    <div class="boilerform">
+                        <label for="new-item-field" class="[ new-item__label ] [ c-label ]">Añadir tarea</label>
+                        <input type="text" class="[ new-item__details ] [ c-input-field ]" id="new-item-field" autocomplete="off" />
+                        <button class="[ c-button ] [ new-item__button ]">Añadir</button>
+                    </div>
+                </form>
+            </section>
+            <aside class="app__status">
+                <p role="status" class="visually-hidden">Has hecho <span class="js-status">1 tarea</span> hoy!</p>
+                <div class="[ app__decor ] [ js-count ]" aria-hidden="true">
+                    <small>Has hecho</small>
+                    <span>0</span>
+                    <small>tareas hoy 😢</small>
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>
