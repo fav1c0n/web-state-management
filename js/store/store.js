@@ -16,7 +16,6 @@ export default class Store {
     if(params.hasOwnProperty('mutations')) {
       this.mutations = params.mutations;
     }
-    // const self = this;
     this.state = new Proxy((params.state || {}), {
       set: function(state, key, value) {
         state[key] = value;
