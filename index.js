@@ -1,3 +1,4 @@
+import './style.css'
 import Count from './js/observers/count.js';
 import List from './js/observers/list.js';
 import Subject from './js/lib/subject.js';
