@@ -1,6 +1,5 @@
 import Count from './js/observers/count.js';
 import List from './js/observers/list.js';
-import Status from './js/observers/status.js';
 import Subject from './js/lib/subject.js';
 
 const subject = new Subject();
@@ -21,4 +20,3 @@ formElement.addEventListener('submit', evt => {
 
 subject.subscribe(new Count());
 subject.subscribe(new List());
-subject.subscribe(new Status());
