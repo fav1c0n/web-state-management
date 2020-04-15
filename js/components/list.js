@@ -11,14 +11,13 @@ export default class List extends Component {
   }
 
   render() {
-    let self = this;
 
     if(store.state.items.length === 0) {
-      self.element.innerHTML = `<p class="no-items">Aún no has terminado nada &#x1f622;</p>`;
+      this.element.innerHTML = `<p class="no-items">Aún no has terminado nada &#x1f622;</p>`;
       return;
     }
 
-    self.element.innerHTML = `
+    this.element.innerHTML = `
       <ul class="app__items">
         ${store.state.items.map(item => {
           return `
@@ -28,7 +27,7 @@ export default class List extends Component {
       </ul>
     `;
 
-    self.element.querySelectorAll('button').forEach((button, index) => {
+    this.element.querySelectorAll('button').forEach((button, index) => {
       button.addEventListener('click', () => {
         store.dispatch('clearItem', { index });
       });

@@ -10,9 +10,8 @@ export default class Status extends Component {
   }
 
   render() {
-    let self = this;
     let plural = store.state.items.length !== 1 ? 's' : '';
 
-    self.element.innerHTML = `${store.state.items.length} tarea${plural}`;
+    this.element.innerHTML = `${store.state.items.length} tarea${plural}`;
   }
 }
