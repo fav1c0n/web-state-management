@@ -1,5 +1,3 @@
-// Import stylesheets
-import './style.css';
 import store from './js/store/index.js'; 
 import Count from './js/components/count.js';
 import List from './js/components/list.js';
